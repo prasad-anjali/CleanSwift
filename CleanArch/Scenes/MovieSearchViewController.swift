@@ -11,37 +11,21 @@ import UIKit
 class MovieSearchViewController: UIViewController, MovieSearchViewableInput
 {
     //MARK: - Properties
-    private lazy var genreLabel: UILabel = {
-        createLabel("Genre")
-    }()
+    private lazy var genreLabel: UILabel = createLabel("Genre")
     
-    private lazy var languageLabel: UILabel = {
-        createLabel("Language")
-    }()
+    private lazy var languageLabel: UILabel = createLabel("Language")
     
-    private lazy var periodLabel: UILabel = {
-        createLabel("Time Period")
-    }()
+    private lazy var periodLabel: UILabel = createLabel("Time Period")
     
-    private lazy var genreMenu: UIButton = {
-        createPulldownButton()
-    }()
+    private lazy var genreMenu: UIButton = createPulldownButton()
     
-    private lazy var languageMenu: UIButton = {
-        createPulldownButton()
-    }()
+    private lazy var languageMenu: UIButton =  createPulldownButton()
     
-    private lazy var periodMenu: UIButton = {
-        createPulldownButton()
-    }()
+    private lazy var periodMenu: UIButton = createPulldownButton()
     
-    private lazy var searchButton: UIButton = {
-       createButton()
-    }()
+    private lazy var searchButton: UIButton = createButton()
     
-    private lazy var resultLabel: UILabel = {
-        createLabel("")
-    }()
+    private lazy var resultLabel: UILabel = createLabel("")
     
     
     private lazy var menuClosure =  { (action: UIAction) in
