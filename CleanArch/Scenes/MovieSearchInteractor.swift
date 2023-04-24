@@ -26,7 +26,7 @@ actor MovieSearchInteractor {
 
 extension MovieSearchInteractor: MovieSearchInteractableInput{
     
-    nonisolated func load(category request: MovieLogic.Category.Request) async {
+    func load(category request: MovieLogic.Category.Request) async {
         
         do {
             let movieCategory =  try await self.categoryWorker.getMovieCategories()
@@ -39,7 +39,7 @@ extension MovieSearchInteractor: MovieSearchInteractableInput{
 
     }
     
-    nonisolated func load(list request: MovieLogic.Lists.Request) async {
+    func load(list request: MovieLogic.Lists.Request) async {
         do {
             let movieList = try await self.listWorker.getMovieList(for: request.genre,
                                                              request.language,
